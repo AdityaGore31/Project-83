@@ -38,11 +38,11 @@ export default class CreateStory extends Component {
   render() {
     if(this.state.fontLoaded) {
       let preview_images = {
-        image_1: require("../assets/image_1.png"),
-        image_2: require("../assets/image_2.png"),
-        image_3: require("../assets/image_3.png"),
-        image_4: require("../assets/image_4.png"),
-        image_5: require("../assets/image_5.png"),
+        image_1: require("../assets/image_1.jpg"),
+        image_2: require("../assets/image_2.jpg"),
+        image_3: require("../assets/image_3.jpg"),
+        image_4: require("../assets/image_4.jpg"),
+        image_5: require("../assets/image_5.jpg"),
       };
       console.log(this.state.previewImage);
 

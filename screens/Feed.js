@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import PostCard from "./PostCard"
+
 import AppLoading from "expo-app-loading";
 
 import * as Font from "expo-font";
@@ -34,7 +36,7 @@ export default class Feed extends Component {
       }
     
       renderItem = ({ item: post }) => {
-        return <PostCard Post={Post} />;
+        return <PostCard Post={Post} navigation={this.props.navigation} />;
       };
     
       keyExtractor = (item, index) => index.toString();
@@ -53,11 +55,11 @@ export default class Feed extends Component {
                             >
                             </Image>
                         </View>
-                        <View styel={styles.appTitleTextContainer}>
+                        <View style={styles.appTitleTextContainer}>
                             <Text style={styles.appTitleText}>Spectagram</Text>
                         </View>
                     </View>
-                    <View>
+                    <View style={styles.cardContainer}>
                         <FlatList
                         keyExtractor={this.keyExtractor}
                         data={posts}
